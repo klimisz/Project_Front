@@ -1,0 +1,47 @@
+<app-modal #modal>
+      <div class="app-modal-header">
+            <h4>{{contact.name}} {{contact.surname}}</h4>
+      </div>
+      <div class="app-modal-body">
+            <div class="row">
+                  <div class="side">
+                        <img [src]="contact.imgPath" alt="">
+                  </div>
+                  <div class="main">
+                        <div class="container-fluid">
+                              <h5 class="font-weight-bold">General Information</h5>
+                              <div class="row border">
+                                    <div class="col-sm-auto">
+                                          <h4>Name: </h4>
+                                          <h4>Surname: </h4>
+                                          <h4>Proffesion: </h4>
+                                          <h4>Birthday: </h4>
+                                    </div>
+                                    <div class="col-sm-auto">
+                                          <h4>{{contact.name}} {{contact.surname}}</h4>
+                                          <h4>{{15}}</h4>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <h5 class="font-weight-bold">Contact Information</h5>
+            <div class="container-fluid">
+                  <div class="row border">
+                        <div class="col-sm-auto">
+                              <h4>Phone: </h4>
+                              <h4>Email: </h4>
+                        </div>
+                        <div class="col-sm-auto">
+      
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <div class="app-modal-footer">
+            <button type="button" class="btn btn-success" (click)="onEdit()">Edit</button>
+            <button type="button" class="btn btn-danger" (click)="onDelete()">Delete</button>
+            <button type="button" class="btn btn-default" (click)="onClose()">Close</button>
+      </div>
+
+</app-modal>

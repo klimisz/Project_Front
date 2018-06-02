@@ -1,0 +1,15 @@
+.fa-user {
+    color: gray;
+  }
+
+  .fa-user-plus {
+    color: gray;
+  }
+
+  .fa-user:hover {
+    color: white;
+}
+
+.fa-user-plus:hover {
+    color: white;
+}

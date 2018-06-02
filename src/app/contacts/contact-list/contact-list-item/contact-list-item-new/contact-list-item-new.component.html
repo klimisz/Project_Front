@@ -1,0 +1,92 @@
+<app-modal #modal>
+        <div class="app-modal-header">
+                <h4>{{this.title}}</h4>
+        </div>
+        <div class="app-modal-body">
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" id="form">
+                        <div class="row">
+                                <div class="side">
+                                        <div class="card-image">
+                                                <img class="img-responsive" [src]="imagePath.value" alt="NO IMAGE">
+                                        </div>
+
+
+                                </div>
+                                <div class="main">
+                                        <div class="container-fluid">
+                                                <h5 class="font-weight-bold">General Information</h5>
+                                                <div class="row">
+                                                        <!-- <div class="col-sm-3">
+                                                                <h4>Name: </h4>
+                                                                <h4>Surname: </h4>
+                                                                <h4>Proffesion: </h4>
+                                                                <h4>Birthday: </h4>
+                                                        </div>
+                                                        <div class="col-sm-9">
+                                                                <div class="form-group">
+                                                                        <input type="text" id="name" class="form-control" formControlName="name">
+                                                                        <input type="text" id="surname" class="form-control" formControlName="surname">
+                                                                        <input type="text" id="proffesion" class="form-control" formControlName="proffesion">
+                                                                        <input type="email" id="email" class="form-control" formControlName="email">
+
+                                                                </div>
+                                                               
+                                                        </div> -->
+                                                        <div class="input-group">
+                                                                <span class="input-group-addon">Name: </span>
+                                                                <input type="text" id="name" class="form-control" formControlName="name">
+                                                        </div>
+                                                        <div class="input-group">
+                                                                <span class="input-group-addon">Surname: </span>
+                                                                <input type="text" id="surname" class="form-control" formControlName="surname">
+                                                        </div>
+                                                        <div class="input-group">
+                                                                <span class="input-group-addon">Proffesion: </span>
+                                                                <input type="text" id="proffesion" class="form-control" formControlName="proffesion">
+                                                        </div>
+                                                        <div class="input-group">
+                                                                <span class="input-group-addon">Birthday: </span>
+                                                                <input type="text" id="birthday" class="form-control" formControlName="birthday">
+                                                        </div>
+                                                </div>
+                                                <h5 class="font-weight-bold">Picture</h5>
+                                                <div class="row">
+                                                        <!-- <h4 for="imageUrl">Image URL:</h4>
+                                                                <input type="text" id="imagePath" class="form-control" formControlName="imgpath" #imagePath> -->
+                                                        <div class="input-group">
+                                                                <span class="input-group-addon">Image URL: </span>
+                                                                <input type="text" id="imagePath" class="form-control" formControlName="imgpath" #imagePath>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-sm-12">
+                                        <ul class="list-group">
+                                                <div class="list-group-item">
+                                                        <div class="input-group">
+                                                                <div class="input-group-btn" dropdown>
+                                                                        <button dropdownToggle type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                Phone
+                                                                        </button>
+                                                                        <div *dropdownMenu class="dropdown-menu">
+                                                                                <button type="button" class="dropdown-item" href="#">Cellphone</button>
+                                                                                <button type="button" class="dropdown-item" href="#">Email</button>
+                                                                                <button type="button" class="dropdown-item" href="#">Adress</button>
+                                                                        </div>
+                                                                </div>
+                                                                <input type="text" class="form-control">
+                                                        </div>
+                                                </div>
+                                        </ul>
+                                </div>
+                        </div>
+                        <button class="btn btn-success" type="button">New Information</button>
+                </form>
+        </div>
+        <div class="app-modal-footer">
+                <button class="btn btn-success" form="form">Save</button>
+                <button id="modalClose" type="button" class="btn btn-default" (click)="onClose()">Close</button>
+        </div>
+</app-modal>

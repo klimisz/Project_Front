@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="col-xs-12">
+    <h1>Contacts</h1>
+    <label for="">Search By:</label>
+    <div class="dropdown">
+      <input type="text">
+      <div class="btn-group" dropdown>
+        <button dropdownToggle type="button" class="btn btn-info dropdown-toggle" >{{searchProperty}}<span class="caret"></span></button>
+        <div *dropdownMenu class="dropdown-menu" role="menu">
+          <button class="dropdown-item" role="menuitem">Name</button>
+          <button class="dropdown-item" role="menuitem">Email</button>
+          <button class="dropdown-item" role="menuitem">Proffesion</button>
+        </div>
+      </div>
+      <button class="btn btn-primary">Search</button>
+      <button class="btn btn-primary" (click)="onNewContact()">New Contact</button>
+    </div>
+  </div>
+</div>
+<br>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <app-contact-list></app-contact-list>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
